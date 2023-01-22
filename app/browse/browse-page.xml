@@ -1,0 +1,105 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <Label 
+            text="COMPTA"
+            fontSize="20%"
+        ></Label>
+    </ActionBar>
+
+    <StackLayout backgroundColor="white">//"#3c495e">
+        <FlexboxLayout
+            di="precedent"
+            flexDirection="row"
+            justifyContent="space-around"
+            
+        >
+            <Label
+                class="centre"
+                text="12/11/98" 
+                textAlign="center" 
+                fontSize="20%"
+                alignSelf="center"
+            />
+            <Label
+                id="reste"
+                class="centre"
+                text="124" 
+                textAlign="center" 
+                fontSize="50%" 
+                fontWeight="bold"
+            />
+        </FlexboxLayout>
+        <Label textAlignment="center">
+            <FormattedString id="la-date">
+                <Span
+                    class="centre"
+                    text="{{ maDate.today }}" 
+                    textAlign="center" 
+                    fontSize="20%"
+                    lineHeight="20px"
+                    />
+                <Span
+                    class="centre"
+                    text="/" 
+                    textAlign="center" 
+                    fontSize="20%"
+                    lineHeight="20px"
+                    />
+                <Span
+                    class="centre"
+                    text="{{ maDate.mounth }}" 
+                    textAlign="center" 
+                    fontSize="20%"
+                    lineHeight="20px"
+                    />
+                <Span
+                    class="centre"
+                    text="/" 
+                    textAlign="center" 
+                    fontSize="20%"
+                    lineHeight="20px"
+                    />
+                <Span
+                    class="centre"
+                    text="{{ maDate.year }}" 
+                    textAlign="center" 
+                    fontSize="20%"
+                    lineHeight="20px"
+                    />
+            </FormattedString>
+        </Label>
+
+       <!-- <Label class="page__content-icon far" text="&#xf1ea;"></Label>-->
+        <TextField
+            id="montant"
+            keyboardType="number"
+            hint="" 
+            color="orangered" 
+            backgroundColor="whitesmoke" 
+            fontSize="50%"
+            width="60%"
+            />
+        <Button
+            id="adition"
+            class="btn addition" 
+            text="+" 
+            tap="onTap" 
+            backgroundColor="rgb(29, 206, 29)" 
+            color="white"
+            fontSize="30%"
+            width="50%"/>
+        <Button 
+            id="soustraction"
+            class="btn soustraction" 
+            text="-" 
+            tap="onTap"
+            backgroundColor="orange"
+            color="white"
+            fontSize="40%"
+            width="50%"
+        />
+    </StackLayout>
+</Page>

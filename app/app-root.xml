@@ -1,0 +1,11 @@
+<TabView androidTabsPosition="bottom">
+
+    <TabViewItem title="Compta" titleColor="green" selectedTabTextColor="yellow">
+        <Frame defaultPage="browse/browse-page" />
+    </TabViewItem>
+
+    <TabViewItem title="Relevé" titleColor="green">
+        <Frame defaultPage="home/home-items-page" />
+    </TabViewItem>
+
+</TabView>
